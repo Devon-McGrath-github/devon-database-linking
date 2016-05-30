@@ -4,14 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "knex init",
+    "migrate:make": "knex migrate:make",
+    "migrate:latest": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed:make": "knex seed:make",
+    "seed:run": "knex seed:run",
+    "test": "tape tests.js",
+    "debug": "node-inspector & nodemon --debug server.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-inspector": "^0.12.8",
+    "nodemon": "^1.9.2",
     "tape": "^4.5.1"
   },
   "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
     "knex": "^0.11.5",
     "sqlite3": "^3.1.4"
   }
