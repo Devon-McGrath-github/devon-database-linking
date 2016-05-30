@@ -9,7 +9,7 @@ exports.up = function (knex, Promise) {
 
 exports.down = function (knex, Promise) {
   console.log('Dropping Customers Table')
-  return knex.schema.dropTableIfExists('Users').then(function () {
+  return knex.schema.dropTableIfExists('customers').then(function () {
     console.log('Customers table was dropped')
   })
 };
