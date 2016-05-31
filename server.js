@@ -7,13 +7,14 @@ var routes = require('./routes')
 var app = express()
 var PORT = process.env.PORT || 3000
 
+app.get('/', routes.home)
+
 app.engine('hbs', hbs({
   extname: 'hbs'
 }))
 
 app.set('view engine', 'hbs')
-
-app.get('/', routes.home)
+app.set('views', path.join(__dirname, 'views'))
 
 app.listen(PORT, function () {
   console.log('Server is listening on:', PORT)
