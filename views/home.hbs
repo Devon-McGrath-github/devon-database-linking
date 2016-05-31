@@ -6,13 +6,17 @@
     </head>
     <body>
         <h1> candy for everyone </h1>
-        
+
         {{#each customer}}
             <li>{{firstName}}</li>
         {{/each}}
 
         <h2>Sunday Candy</h2>
         <h3>Deals: </h3>
+
+        <form action="http://localhost:3000/data" method="get">
+            <button>data</button>
+        </form>
 
     </body>
 </html>
