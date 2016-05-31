@@ -8,6 +8,7 @@ var app = express()
 var PORT = process.env.PORT || 3000
 
 app.get('/', routes.home)
+app.get('/data', routes.getData)
 
 app.engine('hbs', hbs({
   extname: 'hbs'
